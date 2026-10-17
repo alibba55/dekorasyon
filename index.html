@@ -1,1 +1,639 @@
+<!DOCTYPE html>
+<html>
 
+<head >
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Üçgen & Aslan Dekorasyon</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .products img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+    <script src='main.js'></script>
+</head >
+
+<body style="margin: 0; padding: 0; background-color: #F5F1E8">
+
+    <table bgcolor="#8C735B" width="100%">
+        <tr>
+            <td align="center">
+                <h1 style="color: #f4d03f;font-size: 35pt;">Üçgen & Aslan Dekorasyon</h1>
+                <p><i style="color: #ffffff;">Eviniz için önemli <b>dokunuşlar</b></i></p>
+            </td>
+        </tr>
+    </table>
+
+    <table style="background-color: #D2B99A; width: 100%; height: 40px;" align="center">
+        <tr align="center">
+            <td style="width: 25%;"><a href="#anasayfa" style="color: black; font-size: 13pt;text-decoration: none;">
+                    Ana Sayfa </a></td>
+            <td style="width: 25%;"><a href="#urunler" style="color: black; font-size: 13pt;text-decoration: none;">
+                    Ürünlerimiz </a></td>
+            <td style="width: 25%;"><a href="#hakkimizda" style="color: black; font-size: 13pt;text-decoration: none;">
+                    Hakkımızda </a></td>
+            <td style="width: 25%;"><a href="#iletisim" style="color: black; font-size: 13pt;text-decoration: none;">
+                    İletişim </a></td>
+        </tr>
+    </table>
+
+    
+<style>
+    .ana-giris {
+        width: 100%;
+        background: #DCC6AE;
+        border-collapse: collapse;
+    }
+
+    .ana-giris td {
+        width: 50%;
+        padding: 35px 3%;
+        vertical-align: middle;
+        box-sizing: border-box;
+    }
+
+    .giris-etiket {
+        color: #80664F;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0 0 18px;
+    }
+
+    .giris-baslik {
+        color: #49382A;
+        font-size: 36px;
+        line-height: 1.2;
+        margin: 0 0 20px;
+    }
+
+    .giris-aciklama {
+        color: #594839;
+        font-size: 16px;
+        line-height: 1.8;
+        margin: 0 0 28px;
+    }
+
+    .giris-butonlar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .giris-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        min-height: 48px;
+        box-sizing: border-box;
+        padding: 12px 20px;
+        border-radius: 7px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .giris-btn-ana {
+        background: #80664F;
+        color: #FFFFFF;
+        border: 1px solid #80664F;
+    }
+
+    .giris-btn-ana:hover {
+        background: #49382A;
+        border-color: #49382A;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px #49382A25;
+    }
+
+    .giris-btn-ikincil {
+        background: transparent;
+        color: #49382A;
+        border: 1px solid #80664F;
+    }
+
+    .giris-btn-ikincil:hover {
+        background: #F8F6F1;
+        transform: translateY(-2px);
+    }
+
+    .giris-ok {
+        display: inline-block;
+        transition: transform 0.25s ease;
+    }
+
+    .giris-btn-ana:hover .giris-ok {
+        transform: translateX(4px);
+    }
+
+    .giris-resim {
+        display: block;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px #49382A15;
+    }
+
+    @media (max-width: 768px) {
+        .ana-giris,
+        .ana-giris tbody,
+        .ana-giris tr,
+        .ana-giris td {
+            display: block;
+            width: 100%;
+        }
+
+        .ana-giris td {
+            padding: 28px 20px;
+        }
+
+        .giris-baslik {
+            font-size: 30px;
+        }
+
+        .giris-aciklama {
+            font-size: 15px;
+        }
+
+        .giris-resim {
+            height: auto;
+            max-height: 340px;
+            aspect-ratio: 4 / 3;
+        }
+
+        .giris-butonlar {
+            gap: 10px;
+        }
+
+        .giris-btn {
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .giris-baslik {
+            font-size: 26px;
+        }
+
+        .giris-butonlar {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .giris-btn {
+            width: 100%;
+        }
+    }
+</style>
+
+<a name="anasayfa"></a>
+<table class="ana-giris">
+    <tr>
+        <td>
+            <p class="giris-etiket">
+                Modern yaşam alanları için
+            </p>
+
+            <h1 class="giris-baslik">
+                Hayalinizdeki Mekânlara Değer Katıyoruz
+            </h1>
+
+            <p class="giris-aciklama">
+                Parke, seramik, dolap ve duvar paneli
+                çözümlerimizle yaşam alanlarınıza
+                şıklık ve değer katıyoruz.
+            </p>
+
+            <div class="giris-butonlar">
+                <a href="#urunler"
+                   class="giris-btn giris-btn-ana">
+                    Ürünlerimizi Keşfedin
+                    <span class="giris-ok">→</span>
+                </a>
+
+                <a href="#iletisim"
+                   class="giris-btn giris-btn-ikincil">
+                    İletişime Geçin
+                </a>
+            </div>
+        </td>
+
+        <td>
+            <img
+                src="img/anasayfa.jpg"
+                alt="Modern ve şık yaşam alanı"
+                class="giris-resim">
+        </td>
+    </tr>
+</table>
+
+    <br>
+    
+<style>
+    .urunler-tablosu {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 14px 12px;
+        table-layout: fixed;
+    }
+
+    .urunler-tablosu th {
+        background: #FFFFFF;
+        color: #49382A;
+        padding: 22px 10px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .urunler-tablosu td {
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .urunler-tablosu .urun-resmi {
+        display: block;
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.3s ease,
+                    box-shadow 0.3s ease;
+    }
+
+    .urunler-tablosu .urun-resmi:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px #49382A20;
+    }
+
+    .kategori-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        max-width: 100%;
+        padding: 11px 14px;
+        background: transparent;
+        color: #6F4E37;
+        border: 1px solid #C8B49E;
+        border-radius: 7px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .kategori-btn span {
+        transition: transform 0.25s ease;
+    }
+
+    .kategori-btn:hover {
+        background: #80664F;
+        color: #FFFFFF;
+        border-color: #80664F;
+        transform: translateY(-2px);
+    }
+
+    .kategori-btn:hover span {
+        transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+        .urunler-tablosu,
+        .urunler-tablosu tbody {
+            display: block;
+            width: 100%;
+        }
+
+        .urunler-tablosu tr:first-child {
+            display: block;
+        }
+
+        .urunler-tablosu tr:nth-child(2),
+        .urunler-tablosu tr:nth-child(3) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px 12px;
+            margin: 0 12px;
+        }
+
+        .urunler-tablosu tr:nth-child(2) td,
+        .urunler-tablosu tr:nth-child(3) td {
+            width: auto;
+            padding: 0;
+            min-width: 0;
+        }
+
+        .urunler-tablosu .urun-resmi {
+            height: 180px;
+        }
+
+        .urunler-tablosu th {
+            font-size: 24px;
+        }
+
+        .kategori-btn {
+            padding: 9px 8px;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .urunler-tablosu .urun-resmi {
+            height: 145px;
+        }
+
+        .kategori-btn {
+            font-size: 11px;
+            padding: 8px 5px;
+        }
+    }
+</style>
+
+<table class="urunler-tablosu">
+    <tr>
+        <th colspan="4">
+            <a name="urunler"></a>
+            Ürünlerimiz
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            <img class="urun-resmi"
+                 src="img/floorpanmoskova.jpg"
+                 alt="FloorPan Moskova parke"
+                 title="FloorPan Moskova">
+        </td>
+        <td>
+            <img class="urun-resmi"
+                 src="img/duvarpaneli.webp"
+                 alt="Duvar paneli modelleri"
+                 title="Duvar Paneli">
+        </td>
+        <td>
+            <img class="urun-resmi"
+                 src="img/seramikgüral.jpg"
+                 alt="Seramik modelleri"
+                 title="Seramik">
+        </td>
+        <td>
+            <img class="urun-resmi"
+                 src="img/dolap.jpg"
+                 alt="Dolap modelleri"
+                 title="Dolap">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button class="kategori-btn">
+                Parke ve Süpürgelik Modelleri <span>→</span>
+            </button>
+        </td>
+        <td>
+            <button class="kategori-btn">
+                Duvar Paneli Modelleri <span>→</span>
+            </button>
+        </td>
+        <td>
+            <button class="kategori-btn">
+                Seramik Modelleri <span>→</span>
+            </button>
+        </td>
+        <td>
+            <button class="kategori-btn">
+                Dolap Modelleri <span>→</span>
+            </button>
+        </td>
+    </tr>
+</table>
+    <br>
+    
+<style>
+    .hakkimizda {
+        background: #F8F6F1;
+        padding: 65px 7%;
+        color: #49382A;
+        box-sizing: border-box;
+    }
+
+    .hakkimizda-icerik {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hakkimizda-yazi {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hakkimizda-etiket {
+        color: #80664F;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .hakkimizda-baslik {
+        font-size: 34px;
+        line-height: 1.25;
+        margin: 15px 0 20px;
+    }
+
+    .hakkimizda-aciklama {
+        color: #6F6255;
+        font-size: 16px;
+        line-height: 1.9;
+        margin-bottom: 25px;
+    }
+
+    .hakkimizda-resim {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hakkimizda-resim img {
+        display: block;
+        width: 100%;
+        height: 390px;
+        object-fit: cover;
+        border-radius: 14px;
+    }
+
+    .hakkimizda-ozellikler {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 25px 0;
+    }
+
+    .hakkimizda-ozellik {
+        flex: 1;
+        min-width: 110px;
+        padding: 16px;
+        background: #FFFFFF;
+        border: 1px solid #E7DED2;
+        border-radius: 10px;
+    }
+
+    .hakkimizda-ozellik strong {
+        display: block;
+        color: #80664F;
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    .hakkimizda-ozellik span {
+        color: #6F6255;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .hakkimizda-btn {
+        display: inline-block;
+        padding: 13px 22px;
+        background: #80664F;
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 7px;
+        font-weight: 600;
+        transition: all 0.25s ease;
+    }
+
+    .hakkimizda-btn:hover {
+        background: #49382A;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .hakkimizda {
+            padding: 40px 20px;
+        }
+
+        .hakkimizda-icerik {
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .hakkimizda-baslik {
+            font-size: 28px;
+        }
+
+        .hakkimizda-resim {
+            width: 100%;
+        }
+
+        .hakkimizda-resim img {
+            height: auto;
+            aspect-ratio: 4 / 3;
+        }
+
+        .hakkimizda-ozellikler {
+            gap: 10px;
+        }
+    }
+</style>
+
+<section class="hakkimizda" id="hakkimizda">
+    <div class="hakkimizda-icerik">
+
+        <div class="hakkimizda-yazi">
+            <p class="hakkimizda-etiket">
+                Bizi Tanıyın
+            </p>
+
+            <h2 class="hakkimizda-baslik">
+                Yaşam Alanlarınıza Değer Katıyoruz
+            </h2>
+
+            <p class="hakkimizda-aciklama">
+                Üçgen &amp; Aslan Dekorasyon olarak
+                parke, seramik, duvar paneli ve dolap
+                çözümlerimizle yaşam alanlarınıza
+                estetik ve şıklık katmayı hedefliyoruz.
+                Tarzınıza ve ihtiyaçlarınıza uygun
+                ürünlerle evinizi güzelleştirmenize
+                yardımcı oluyoruz.
+            </p>
+
+            <div class="hakkimizda-ozellikler">
+                <div class="hakkimizda-ozellik">
+                    <strong>Estetik</strong>
+                    <span>Modern tasarım anlayışı</span>
+                </div>
+
+                <div class="hakkimizda-ozellik">
+                    <strong>Çeşitlilik</strong>
+                    <span>Farklı tarzlara uygun ürünler</span>
+                </div>
+
+                <div class="hakkimizda-ozellik">
+                    <strong>Destek</strong>
+                    <span>İhtiyacınıza uygun çözümler</span>
+                </div>
+            </div>
+
+            <a href="iletisim.html" class="hakkimizda-btn">
+                Bizimle İletişime Geç →
+            </a>
+        </div>
+
+        <div class="hakkimizda-resim">
+            <img
+                src="img/anasayfa.jpg"
+                alt="Modern dekorasyon ve yaşam alanı">
+        </div>
+
+    </div>
+</section>
+
+</body>
+
+</html>
