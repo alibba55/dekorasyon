@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seramik Modelleri - Aslan Concept</title>
+    <style>
+        :root { --cream: #F8F6F1; --white: #FFFFFF; --taupe: #80664F; --brown: #49382A; --body: #6F6255; --line: #E7DED2; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: var(--cream); color: var(--brown); font-family: Arial, sans-serif; line-height: 1.6; }
+        header { padding: 20px 5%; background: var(--brown); color: var(--white); display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; font-size: 22px; }
+        header a { color: var(--white); text-decoration: none; font-weight: bold; background: var(--taupe); padding: 8px 16px; border-radius: 6px; }
+        .hero { padding: 40px 5%; text-align: center; background: #E9D9C7; }
+        .hero h2 { margin: 0 0 10px; font-size: 32px; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .card { background: var(--white); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .card-body h3 { margin: 0 0 8px; font-size: 20px; }
+        .card-body p { margin: 0 0 16px; color: var(--body); font-size: 14px; }
+        .btn-contact { display: inline-block; width: 100%; text-align: center; padding: 10px; background: var(--taupe); color: var(--white); text-decoration: none; font-weight: bold; border-radius: 6px; }
+        footer { padding: 20px; text-align: center; background: var(--brown); color: #E8D9C8; font-size: 13px; margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aslan Concept Dekorasyon</h1>
+        <a href="index.html">← Ana Sayfaya Dön</a>
+    </header>
+
+    <section class="hero">
+        <h2>Seramik Çözümleri</h2>
+        <p>Mutfak ve banyolar için şık, leke tutmaz seramik serileri.</p>
+    </section>
+
+    <main class="container">
+        <div class="grid">
+            <article class="card">
+                <img src="seramikgüral.jpg" alt="Güral Seramik">
+                <div class="card-body">
+                    <h3>Güral Seramik Serisi</h3>
+                    <p>Banyo ve mutfak zeminleri için suya dayanıklı, modern mermer desenli seramik.</p>
+                    <a href="https://wa.me/905070283883?text=Gural%20Seramik%20hakkinda%20bilgi%20almak%20istiyorum" class="btn-contact" target="_blank">Fiyat / Bilgi Al</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="seramik1.jpg" alt="Mermer Desen Seramik">
+                <div class="card-body">
+                    <h3>Mermer Görünümlü Seramik</h3>
+                    <p>Geniş ebatlı granit dokusu ile lüks mekân tasarımları.</p>
+                    <a href="https://wa.me/905070283883?text=Mermer%20Desen%20Seramik%20hakkinda%20bilgi%20almak%20istiyorum" class="btn-contact" target="_blank">Fiyat / Bilgi Al</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="seramik2.jpg" alt="Beton Dokulu Seramik">
+                <div class="card-body">
+                    <h3>Beton Doku Mat Seramik</h3>
+                    <p>Kaymaz yüzeyi ile banyo ve teras alanlarına özel modern mat doku.</p>
+                    <a href="https://wa.me/905070283883?text=Mat%20Seramik%20hakkinda%20bilgi%20almak%20istiyorum" class="btn-contact" target="_blank">Fiyat / Bilgi Al</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Aslan Concept Dekorasyon. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
